@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calclulater</title>
+</head>
+<body>
+    <input type="number"name name="first" id="first">
+    <select  id="opn">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">x</option>
+        <option value="%">%</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" name="secand" id="secand">
+    <br>
+    <br>
+    <button onclick="cal()">calclulater</button>
+    <input type="text" name="therd" id="res" readonly=" ">
+
+</body>
+<script type="text/javascript">
+    function cal(){
+        let opr1=document.getElementById('first').value;
+        let opr2=document.getElementById('secand').value;
+        let opn=document.getElementById('opn').value;      
+        let res;
+        if (opn=="+"){
+             res = Number(opr1) + Number(opr2);
+
+        }
+        if(opn=="-"){
+             res= opr1-opr2;
+        }
+        if(opn=="*"){
+             res= opr1*opr2;
+
+        }
+        if(opn=="%"){
+             res= opr1%opr2;
+
+        }
+        if(opn=="/"){
+             res=opr1/opr2;
+
+        }
+
+    
+    document.getElementById("res").value= res;
+    }
+</script>
+</html>
+
